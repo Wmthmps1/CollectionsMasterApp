@@ -147,20 +147,7 @@ namespace CollectionsMasterConsoleUI
         {
 
             numberList.RemoveAll(i => i % 2 != 0);
-            /*
-            var holdingList = new List<int>();
-            for (int i = 0; i < numberList.Count(); i++)
-            {
-
-                if (numberList[i] % 2 == 0)
-                {
-                    holdingList.Add(numberList[i]);
-                }
-                
-            }
-            numberList.Clear();
-            numberList = holdingList;
-            */
+            
         }
 
         private static void NumberChecker(List<int> numberList, int searchNumber)
