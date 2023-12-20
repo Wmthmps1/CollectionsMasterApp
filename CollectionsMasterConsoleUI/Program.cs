@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace CollectionsMasterConsoleUI
 {
@@ -144,13 +145,22 @@ namespace CollectionsMasterConsoleUI
 
         private static void OddKiller(List<int> numberList)
         {
-            for(int i = 0; i < numberList.Count; i++)
+
+            numberList.RemoveAll(i => i % 2 != 0);
+            /*
+            var holdingList = new List<int>();
+            for (int i = 0; i < numberList.Count(); i++)
             {
-                if (numberList[i] % 2 != 0)
+
+                if (numberList[i] % 2 == 0)
                 {
-                    numberList[i] = 0;
+                    holdingList.Add(numberList[i]);
                 }
+                
             }
+            numberList.Clear();
+            numberList = holdingList;
+            */
         }
 
         private static void NumberChecker(List<int> numberList, int searchNumber)
